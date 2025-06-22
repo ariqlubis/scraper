@@ -2,19 +2,23 @@
 
 ## Keywords
 KEYWORDS = [
-    "Prabowo",
-    # "Gibran"
+    "BSI International Expo",
+    # "BSExpo BSI",
+    # "BSI Expo 2025",
+    "BYOND",
+    # "BSI Expo JCC",
+    # "BSI",
 ]
 
 # Date range for search
 SINCE = "2025-06-01"
-UNTIL = "2025-06-18"
+UNTIL = "2025-06-22"
 
 # Language filter (empty for all languages)
-LANGUAGE = "id"  # Indonesian
+LANGUAGE = "Id"  # Indonesian (Id)
 
 # Scrolling behavior
-MAX_SCROLLS = 5  # Maximum scrolls per keyword
+MAX_SCROLLS = 500  # Maximum scrolls per keyword
 SCROLL_DELAY = 3  # Seconds between scrolls
 NO_NEW_TWEETS_LIMIT = 3  # Stop after this many scrolls with no new tweets
 

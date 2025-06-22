@@ -1,0 +1,9 @@
+pandas
+scikit-learn
+matplotlib
+wordcloud
+Sastrawi
+nltk
+transformers
+torch
+fastopic
