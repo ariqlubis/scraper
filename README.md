@@ -1,4 +1,4 @@
-# 🐦 Twitter Scraper + Sentiment & Topic Analysis (Indonesian)
+# 🐦 Twitter Scraper + Sentiment & Topic Analysis
 
 Crawl Twitter using Selenium, analyze Indonesian sentiment with HuggingFace, and extract topics using FASTopic.
 
