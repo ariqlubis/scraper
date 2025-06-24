@@ -20,41 +20,43 @@ Crawl Twitter using Selenium, analyze Indonesian sentiment with HuggingFace, and
 
 - Python 3.10+
 - Google Chrome (latest)
-- ChromeDriver matching your Chrome version
-- [Astral CLI + uv](https://astral.sh/docs/getting-started/)
+- ChromeDriver matching your Chrome version (https://googlechromelabs.github.io/chrome-for-testing/)
 
 ---
 
-## ⚡ Setup with Astral + uv (Windows)
+## Setup
 
-### 1. Install Astral CLI
-
-```bash
-pip install astral-cli
-```
-
-### 2. Initialize the Astral project
+### 1. Download and install Miniconda 3.10
 
 ```bash
-astral init --yes
+wget https://repo.anaconda.com/miniconda/Miniconda3-py310_25.3.1-1-Windows-x86_64.exe
 ```
 
-### 3. Install dependencies using uv
+### 2. Install ChromeDriver
+ChromeDriver matching your Chrome version (https://googlechromelabs.github.io/chrome-for-testing/)
 
+### 3. Git clone repository
 ```bash
-uv pip install -r requirements.txt
+git clone https://github.com/ariqlubis/scraper.git
 ```
 
-### 4. Create `.env` file for login
+### 4. Make virtual environment
+```bash
+cd scraper
+conda create -p .venv python==3.10
+conda activate ./.venv
+```
+### 5. Install dependencies
+```bash
+pip install -r requirements.txt
+```
 
-Create a file named `.env` in the project root:
+### 6. Create a file named `.env` in the project root:
 
 ```env
 TWITTER_USER=your_username
 TWITTER_PASS=your_password
 ```
-
-> ❗ Twitter 2FA is not supported.
 
 ---
 
@@ -71,15 +73,12 @@ OUTPUT_FORMAT = "csv"  # or "json", "excel"
 HEADLESS = False       # Set to True to hide Chrome
 ```
 
-Make sure you have `chromedriver.exe` for your Chrome version:  
-➡️ https://chromedriver.chromium.org/downloads
-
 ---
 
 ## 🧹 Step 1: Run the Scraper
 
 ```bash
-uv python src/x_scraper.py
+python src/x_scraper.py
 ```
 
 ✅ Output: `output/twitter_data_YYYYMMDD_HHMMSS.csv`
@@ -89,7 +88,7 @@ uv python src/x_scraper.py
 ## 📊 Step 2: Run the Analysis Pipeline
 
 ```bash
-uv python src/main.py
+python src/main.py
 ```
 
 ✅ Outputs saved to `output_analysis/`:
